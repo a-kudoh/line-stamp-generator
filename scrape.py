@@ -5,12 +5,12 @@ from bs4 import BeautifulSoup
 
 #htmlのソースから画像リンクを抽出するための関数
 def rem(str):
-    str0 = str.split("(")[1] 
+    str0 = str.split("(")[1]
     return str0.split(";")[0]
 
 #スタンプセットのNo.(指定した番号から始まり、セットごとにフォルダが生成される)
 setname = 504
-chara = "&character=" + str(10) #　10: ネコ, 11:ウサギ, 12:イヌ, 13:クマ, 14:鳥, 19:パンダ, 20:アザラシ
+chara = "&character=" + str(19) #　10: ネコ, 11:ウサギ, 12:イヌ, 13:クマ, 14:鳥, 19:パンダ, 20:アザラシ
 #キャラクター指定せずにすべてを対象とする場合
 #chara = ""
 
@@ -40,7 +40,5 @@ for page in range(15,101):
                 f = open( str(setname) + "/" + str(fname) + ".png", 'wb')
                 f.write(req.content)
                 f.close()
-                    
+
     print ("finished downloading page: " + str(page) + " , set: ~" + str(setname)  )
-
-
