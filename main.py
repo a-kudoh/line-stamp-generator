@@ -17,7 +17,7 @@ flags.DEFINE_integer("input_height", 224, "The size of image to use (will be cen
 flags.DEFINE_integer("input_width", 259, "The size of image to use (will be center cropped). If None, same value as input_height [None]")#入力画像の縦サイズ
 flags.DEFINE_integer("output_height", 64, "The size of the output images to produce [64]")#出力画像の縦サイズ：8 x 8 = 64枚がまとめられる（合計サイズ：592 x 512）
 flags.DEFINE_integer("output_width", 74, "The size of the output images to produce. If None, same value as output_height [None]")#出力画像の横サイズ
-flags.DEFINE_string("dataset", "good_size", "The name of dataset [celebA, mnist, lsun]")#入力データの名前
+flags.DEFINE_string("dataset", "AI-st2", "The name of dataset [celebA, mnist, lsun]")#入力データの名前
 flags.DEFINE_string("input_fname_pattern", "*.png", "Glob pattern of filename of input images [*]")#入力データの画像形式
 flags.DEFINE_string("checkpoint_dir", "checkpoint", "Directory name to save the checkpoints [checkpoint]")
 flags.DEFINE_string("data_dir", "./data", "Root directory of dataset [data]")
